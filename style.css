@@ -1,0 +1,49 @@
+:root{
+    --bg: #0f172a;      /* background */
+    --text: #e5e7eb;    /* text */
+    --muted: #94a3b8;   /* subtext */
+    --link: #a78bfa;    /* links */
+    --panel: #111827;   /* header/footer panel */
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body{
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+  
+  /* Container / layout */
+  .container { width: min(1000px, 92vw); margin: 0 auto; padding: 1rem; }
+  .narrow { width: min(800px, 92vw); }
+  
+  /* Header & nav */
+  header { position: sticky; top: 0; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,.08); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: .5rem 1rem; }
+  .logo { color: white; font-weight: 700; text-decoration: none; }
+  .menu { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+  .menu a { color: var(--text); text-decoration: none; padding: .5rem .75rem; border-radius: 10px; }
+  .menu a.active, .menu a:hover { background: rgba(167,139,250,.15); }
+  
+  /* Typography */
+  h1 { font-size: clamp(2rem, 5vw, 3rem); margin-top: 1rem; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 1rem; }
+  h3 { font-size: 1.25rem; margin-top: 1rem; }
+  p { color: var(--text); }
+  a { color: var(--link); }
+  
+  /* Images */
+  .hero-img, .feature-img {
+    width: 100%; height: auto; border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.12);
+    display: block; margin: 1rem 0;
+  }
+  
+  /* Responsive tweak */
+  @media (max-width: 700px){
+    .menu { gap: .5rem; }
+  }
+  
